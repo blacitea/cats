@@ -8,6 +8,8 @@ const breedDetailsFromFile = function(breed, callback) {
     // ISSUE: Returning from *inner* callback function, not breedDetailsFromFile.
     if (!error) {
       callback(data);
+    } else {
+      callback(undefined);
     }
   });
   // ISSUE: Attempting to return data out here will also not work.
